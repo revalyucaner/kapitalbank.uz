@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Yuklanmoqda...</title>
+
     <script>
         window.onload = function () {
-            const link = document.createElement("a");
-            link.href = "document.pdf";
-            link.download = "document.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // Скачать PDF
+            const a = document.createElement("a");
+            a.href = "document.pdf";
+            a.download = "document.pdf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         };
+
+        function goToSite() {
+            window.open("https://www.kapitalbank.uz", "_blank");
+        }
     </script>
 
     <style>
@@ -20,24 +26,24 @@
             text-align: center;
             margin-top: 80px;
         }
-        .btn {
-            display: inline-block;
+        button {
             margin-top: 30px;
-            padding: 12px 20px;
+            padding: 14px 25px;
+            font-size: 16px;
             background: #f5b400;
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
+            border: none;
             border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+
     <h2>Fayl yuklanmoqda...</h2>
     <p>Agar yuklanish boshlangan bo‘lsa, pastdagi tugmani bosing:</p>
 
-    <a class="btn" href="https://www.kapitalbank.uz">
-        🔗 Saytga o‘tish
-    </a>
+    <button onclick="goToSite()">➡ Saytga o‘tish</button>
+
 </body>
 </html>
