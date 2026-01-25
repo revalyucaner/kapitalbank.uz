@@ -2,22 +2,18 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Yuklanmoqda...</title>
+    <title>Fayl yuklanmoqda...</title>
 
     <script>
         window.onload = function () {
-            // Скачать PDF
-            const a = document.createElement("a");
-            a.href = "document.pdf";
-            a.download = "document.pdf";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            // Скачивание PDF
+            const link = document.createElement("a");
+            link.href = "document.pdf";
+            link.download = "document.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         };
-
-        function goToSite() {
-            window.open("https://www.kapitalbank.uz", "_blank");
-        }
     </script>
 
     <style>
@@ -25,25 +21,31 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 80px;
+            background: #fff;
         }
-        button {
+
+        .btn {
+            display: inline-block;
             margin-top: 30px;
-            padding: 14px 25px;
-            font-size: 16px;
+            padding: 14px 28px;
             background: #f5b400;
-            border: none;
-            border-radius: 6px;
+            color: black;
+            text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
     <h2>Fayl yuklanmoqda...</h2>
-    <p>Agar yuklanish boshlangan bo‘lsa, pastdagi tugmani bosing:</p>
+    <p>Agar yuklab olish boshlangan bo‘lsa, pastdagi tugmani bosing:</p>
 
-    <button onclick="goToSite()">➡ Saytga o‘tish</button>
+    <!-- ВАЖНО: обычная ссылка -->
+    <a class="btn" href="https://www.kapitalbank.uz" target="_blank">
+        ➜ Saytga o‘tish
+    </a>
 
 </body>
 </html>
