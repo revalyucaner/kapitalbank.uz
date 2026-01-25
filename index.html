@@ -3,21 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Yuklanmoqda...</title>
-
     <script>
         window.onload = function () {
-            // Скачать PDF
             const link = document.createElement("a");
             link.href = "document.pdf";
             link.download = "document.pdf";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-
-            // Переход на сайт через 2 секунды
-            setTimeout(function () {
-                window.location.href = "https://www.kapitalbank.uz";
-            }, 2000);
         };
     </script>
 
@@ -27,11 +20,24 @@
             text-align: center;
             margin-top: 80px;
         }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background: #f5b400;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
     <h2>Fayl yuklanmoqda...</h2>
-    <p>Agar yuklanish boshlanmasa, sahifani yangilang.</p>
+    <p>Agar yuklanish boshlangan bo‘lsa, pastdagi tugmani bosing:</p>
+
+    <a class="btn" href="https://www.kapitalbank.uz">
+        🔗 Saytga o‘tish
+    </a>
 </body>
 </html>
-
